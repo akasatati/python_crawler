@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  crawler:
+    build:
+      context: ./docker/
+    volumes:
+      - "./crawler/src:/work"
+    working_dir: /work
+    network_mode: "host"
+    restart: always
+    tty: true
